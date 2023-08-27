@@ -336,153 +336,100 @@ GetAllFoodItems();
 
 function GetAllTheVegies() {
 
-    for (let index = 0; index < FoodOriginalData.length; index++) {
-
-        const category = FoodOriginalData[index].category;
-
-        if (category === "Vegetable") {
-            console.log(FoodOriginalData[index]);
-        }
-
-    }
+    const Filtervegies = FoodOriginalData.filter(
+        (item) => item.category == "Vegetable"
+    );
+    console.log(Filtervegies);
 }
 
-const Filtervegies = FoodOriginalData.filter(GetAllTheVegies);
-console.log(Filtervegies);
-
-
+GetAllTheVegies();
 
 function GetAllTheFruits() {
-
-    for (let index = 0; index < FoodOriginalData.length; index++) {
-
-        const category = FoodOriginalData[index].category;
-
-        if (category === "Fruit") {
-            console.log(FoodOriginalData[index]);
-        }
-
-    }
+    const FilterFruits = FoodOriginalData.filter(
+        (item) => item.category == "Fruit"
+    );
+    console.log(FilterFruits);
 }
 
-const FilterFruits = FoodOriginalData.filter(GetAllTheFruits);
-console.log(FilterFruits);
-
+GetAllTheFruits();
 
 
 function GetAllTheProteins() {
 
-    for (let index = 0; index < FoodOriginalData.length; index++) {
-
-        const category = FoodOriginalData[index].category;
-
-        if (category === "Protein") {
-            console.log(FoodOriginalData[index]);
-        }
-
-    }
+    const FilterProteins = FoodOriginalData.filter(
+        (item) => item.category == "Protein"
+    );
+    console.log(FilterProteins);
 }
-
-const FilterProteins = FoodOriginalData.filter(GetAllTheProteins);
-console.log(FilterProteins);
-
+GetAllTheProteins();
 
 function GetAllTheNuts() {
 
-    for (let index = 0; index < FoodOriginalData.length; index++) {
-
-        const category = FoodOriginalData[index].category;
-
-        if (category === "Nuts") {
-            console.log(FoodOriginalData[index]);
-        }
-
-    }
+    const FilterNuts = FoodOriginalData.filter(
+        (item) => item.category == "Nuts"
+    );
+    console.log(FilterNuts);
 }
 
-const FilterNuts = FoodOriginalData.filter(GetAllTheNuts);
-console.log(FilterNuts);
-
+GetAllTheNuts();
 
 
 function GetAllTheGrains() {
-
-    for (let index = 0; index < FoodOriginalData.length; index++) {
-
-        const category = FoodOriginalData[index].category;
-
-        if (category === "Grain") {
-            console.log(FoodOriginalData[index]);
-        }
-
-    }
+    const FilterGrains = FoodOriginalData.filter((item) => item.category == "Grain");
+    console.log(FilterGrains);
 }
 
-const FilterGrains = FoodOriginalData.filter(GetAllTheGrains);
-console.log(FilterGrains);
+GetAllTheGrains();
 
 
 function GetAllTheDairy() {
 
-    for (let index = 0; index < FoodOriginalData.length; index++) {
-
-        const category = FoodOriginalData[index].category;
-
-        if (category === "Dairy") {
-            console.log(FoodOriginalData[index]);
-        }
-
-    }
+    const FilterDairy = FoodOriginalData.filter((item) => item.category == "Dairy");
+    console.log(FilterDairy);
 }
 
-const FilterDairy = FoodOriginalData.filter(GetAllTheDairy);
-console.log(FilterDairy);
-
+GetAllTheDairy();
 
 function CaloriesAbove() {
 
-    for (let index = 0; index < FoodOriginalData.length; index++) {
+    const FilterCalorie = FoodOriginalData.filter(
+        (item) => item.calorie > 100
+    );
+    console.log(FilterCalorie);
 
-        const calorie = FoodOriginalData[index].calorie;
-
-        if (calorie > 100) {
-            console.log(FoodOriginalData[index]);
-        }
-
-    }
 }
 
-const FilterCalorie = FoodOriginalData.filter(CaloriesAbove);
-console.log(FilterCalorie);
-
+CaloriesAbove();
 
 function Caloriesbelow() {
 
-    for (let index = 0; index < FoodOriginalData.length; index++) {
-
-        const calorie = FoodOriginalData[index].calorie;
-
-        if (calorie < 100) {
-            console.log(FoodOriginalData[index]);
-        }
-
-    }
+    const Filtercaloriesbelow = FoodOriginalData.filter((item) => item.calorie < 100);
+    console.log(Filtercaloriesbelow);
 }
-const Filtercaloriesbelow = FoodOriginalData.filter(Caloriesbelow);
-console.log(Filtercaloriesbelow);
+
+Caloriesbelow();
 
 
-const ProtienSort = FoodOriginalData.sort((a, b) => {
+function ProtiensSorting() {
+    const ProtienSort = FoodOriginalData.sort((a, b) => {
 
-    return b.protiens - a.protiens;
+        return b.protiens - a.protiens;
 
-});
+    });
 
-console.log(ProtienSort);
+    console.log(ProtienSort);
+}
 
-const CabSort = FoodOriginalData.sort((a, b) => {
+ProtiensSorting();
 
-    return a.cab - b.cab;
 
-});
-console.log(CabSort);
+function CabSorting() {
+    const CabSort = FoodOriginalData.sort((a, b) => {
+
+        return a.cab - b.cab;
+
+    });
+    console.log(CabSort);
+}
+
+CabSorting();
