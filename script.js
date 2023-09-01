@@ -411,7 +411,7 @@ Caloriesbelow();
 
 
 function ProtiensSorting() {
-    const ProtienSort = FoodOriginalData.sort((a, b) => {
+    const ProtienSort = FoodOriginalData.slice().sort((a, b) => {
 
         return b.protiens - a.protiens;
 
@@ -424,7 +424,7 @@ ProtiensSorting();
 
 
 function CabSorting() {
-    const CabSort = FoodOriginalData.sort((a, b) => {
+    const CabSort = FoodOriginalData.slice().sort((a, b) => {
 
         return a.cab - b.cab;
 
